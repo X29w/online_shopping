@@ -1,19 +1,81 @@
 {
 	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "uni-app"
-		}
-	}],
+            "path" : "pages/Home/Home",
+            "style" :                                                                                    
+            {
+                // "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Systematization/Systematization",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Concentrated-place/Concentrated-place",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Personal-Center/Personal-Center",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "X-universum",
+		"navigationBarBackgroundColor": "#515151",
+		"backgroundColor": "#8a8a8a",
 		"app-plus": {
 			"background": "#efeff4"
 		}
+    
 	},
+  
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/Home/Home",
+        "text": "Home",
+        "iconPath": "static/tab_icons/x.png",
+        "selectedIconPath": "static/tab_icons/xactive.png"
+      },
+      {
+        "pagePath": "pages/Systematization/Systematization",
+        "text": "Category",
+        "iconPath": "static/tab_icons/分类.png",
+        "selectedIconPath": "static/tab_icons/分类active.png"
+      },
+      {
+        "pagePath": "pages/Concentrated-place/Concentrated-place",
+        "text": "Pocket",
+        "iconPath": "static/tab_icons/仓库.png",
+        "selectedIconPath": "static/tab_icons/仓库 active.png"
+      },
+      {
+        "pagePath": "pages/Personal-Center/Personal-Center",
+        "text": "individual",
+        "iconPath": "static/tab_icons/个人中心.png",
+        "selectedIconPath": "static/tab_icons/个人中心active.png"
+      }
+    ]
+  },
   "condition" : { //模式配置，仅开发期间生效
     "current": 0, //当前激活的模式(list 的索引项)
     "list": [
