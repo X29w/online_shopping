@@ -6,7 +6,7 @@ import App from './App'
 // 导入网络请求包
 import { $http } from '@escook/request-miniprogram'
 uni.$http = $http
-$http.baseUrl = 'https://api-hmugo-web.itheima.net'
+$http.baseUrl = 'http://api-ugo-web.itheima.net'
 
 $http.beforeRequest = function(option){
   uni.showLoading({
