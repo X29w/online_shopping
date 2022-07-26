@@ -1,5 +1,11 @@
 <template>
   <view>
+    <!-- 搜索 -->
+    <view class="search-box">
+      <search @click="clicktoSearch"></search>
+    </view>
+    
+    <!-- 轮播图 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
       <swiper-item v-for="( item , i ) in swiperList" :key="i">
         <navigator class="swiper-item" :url="'/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id">
@@ -98,6 +104,13 @@
           })
         })
         this.floorList = res.message
+      },
+      
+      
+      clicktoSearch(){
+        uni.navigateTo({
+          url:"/subpkg/search/search"
+        })
       }
     }
   }
@@ -142,5 +155,11 @@ swiper{
     display: flex;
     padding: 10rpx;
     
+  }
+  
+  .search-box{
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 </style>

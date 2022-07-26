@@ -10,7 +10,7 @@
 			<input v-if="show || searchVal" :focus="showSync" :disabled="readonly" :placeholder="placeholderText" :maxlength="maxlength"
 				class="uni-searchbar__box-search-input" confirm-type="search" type="text" v-model="searchVal"
 				@confirm="confirm" @blur="blur" @focus="emitFocus" />
-			<text v-else class="uni-searchbar__text-placeholder">{{ placeholder }}</text>
+			<text v-else class="uni-searchbar__text-placeholder" style="color: #1296db;">{{ placeholder }}</text>
 			<view v-if="show && (clearButton==='always'||clearButton==='auto'&&searchVal!=='') &&!readonly"
 				class="uni-searchbar__box-icon-clear" @click="clear">
 				<slot name="clearIcon">
@@ -109,8 +109,8 @@
 		},
 		data() {
 			return {
-				show: false,
-				showSync: false,
+				show: true,
+				showSync: true,
 				searchVal: ''
 			}
 		},
@@ -235,7 +235,8 @@
 		flex-direction: row;
 		position: relative;
 		padding: 10px;
-		// background-color: #fff;
+		background-color: #515151;
+    
 	}
 
 	.uni-searchbar__box {
@@ -251,6 +252,8 @@
 		align-items: center;
 		height: $uni-searchbar-height;
 		padding: 5px 8px 5px 0px;
+    
+    border: #1296db solid 2px;
 	}
 
 	.uni-searchbar__box-icon-search {
@@ -268,7 +271,7 @@
 	.uni-searchbar__box-search-input {
 		flex: 1;
 		font-size: 14px;
-		color: #333;
+		color: #1296db;
 	}
 
 	.uni-searchbar__box-icon-clear {
@@ -282,7 +285,7 @@
 
 	.uni-searchbar__text-placeholder {
 		font-size: 14px;
-		color: #B3B3B3;
+		color: #1296db;
 		margin-left: 5px;
 	}
 

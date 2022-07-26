@@ -1,5 +1,10 @@
 <template>
   <view>
+    <!-- 搜索 -->
+    <search @click="clicktoSearch"></search>
+    
+    
+    <!-- 内容选择滑动区 -->
     <view class="scroll-view-container">
       
       
@@ -43,7 +48,7 @@
     
     onLoad(){
       const sysInfo = uni.getSystemInfoSync()
-      this.wh = sysInfo.windowHeight
+      this.wh = sysInfo.windowHeight - 50
       
       this.getsystematizationList()
     },
@@ -70,6 +75,12 @@
       gotoGoodsList(item){
         uni.navigateTo({
           url:'/subpkg/goods_list/goods_list?cid='+ item.cat_id
+        })
+      },
+      
+      clicktoSearch(){
+        uni.navigateTo({
+          url:'/subpkg/search/search'
         })
       }
     }
