@@ -50,14 +50,14 @@
       }
     },
     
-    onLoad(){
-      const sysInfo = uni.getSystemInfoSync()
+    onLoad(options){
+      const sysInfo = uni.getSystemInfoSync(options)
       this.wh = sysInfo.windowHeight - 50
       
-      this.getsystematizationList()
+      this.getsystematizationList(options)
     },
     methods: {
-      async getsystematizationList(){
+      async getsystematizationList(options){
         const {data:res} = await uni.$http.get('/api/public/v1/categories')
         
         if(res.meta.status !==200) return uni.$showMsg()

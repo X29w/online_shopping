@@ -10,11 +10,10 @@ import { $http } from '@escook/request-miniprogram'
 uni.$http = $http
 $http.baseUrl = 'http://api-ugo-web.itheima.net'
 
-$http.beforeRequest = function(option){
+$http.beforeRequest = function(options){
   uni.showLoading({
     title:'sir,我马上处理好'
   })
-  console.log(option);
     // 判断请求的是否为有权限的 API 接口
     if (options.url.indexOf('/my/') !== -1) {
       // 为请求头添加身份认证字段
@@ -25,7 +24,7 @@ $http.beforeRequest = function(option){
     }
 }
 
-$http.afterRequest = function () {
+$http.afterRequest = function (options) {
   uni.hideLoading()
 }
 

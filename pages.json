@@ -97,20 +97,20 @@
       {
         "pagePath": "pages/Systematization/Systematization",
         "text": "Category",
-        "iconPath": "static/tab_icons/分类.png",
-        "selectedIconPath": "static/tab_icons/分类active.png"
+        "iconPath": "static/tab_icons/class.png",
+        "selectedIconPath": "static/tab_icons/classactive.png"
       },
       {
         "pagePath": "pages/Concentrated-place/Concentrated-place",
         "text": "Pocket",
-        "iconPath": "static/tab_icons/仓库.png",
-        "selectedIconPath": "static/tab_icons/仓库 active.png"
+        "iconPath": "static/tab_icons/box.png",
+        "selectedIconPath": "static/tab_icons/boxactive.png"
       },
       {
         "pagePath": "pages/Personal-Center/Personal-Center",
         "text": "individual",
-        "iconPath": "static/tab_icons/个人中心.png",
-        "selectedIconPath": "static/tab_icons/个人中心active.png"
+        "iconPath": "static/tab_icons/personl.png",
+        "selectedIconPath": "static/tab_icons/personlactive.png"
       }
     ]
   },

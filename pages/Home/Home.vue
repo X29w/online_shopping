@@ -67,13 +67,13 @@
       };
     },
     
-    onLoad(){
-       this.getSwiperList()
-       this.getNavList()
-       this.getFloorList()
+    onLoad(options){
+       this.getSwiperList(options)
+       this.getNavList(options)
+       this.getFloorList(options)
     },
     methods:{
-      async getSwiperList(){
+      async getSwiperList(options){
         const {data:res} = await uni.$http.get('/api/public/v1/home/swiperdata')
         if(res.meta.status !== 200)
         {
@@ -84,7 +84,7 @@
         uni.$showMsg('很乐意为您效劳')
       },
       
-      async getNavList(){
+      async getNavList(options){
         const {data:res} = await uni.$http.get('/api/public/v1/home/catitems')
         if( res.meta.status !== 200) return uni.$showMsg()
         this.navList = res.message
@@ -98,7 +98,7 @@
         }
       },
       
-      async getFloorList(){
+      async getFloorList(options){
         const { data:res } = await uni.$http.get('/api/public/v1/home/floordata')
         if(res.meta.status !== 200) return uni.$showMsg()
         
